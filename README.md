@@ -19,3 +19,14 @@ cd eece430-assignment5-inventory-agent/inventory
 ```
 
 Create `.env` with your Gemini API key, then run the build and run commands above.
+
+## Run the published Docker image
+
+Download `inventory-agent.tar.gz` from [GitHub Releases](https://github.com/theanamansour/eece430-assignment5-inventory-agent/releases/tag/v1.0). In `inventory`, with your local `.env` file:
+
+```powershell
+docker load -i inventory-agent.tar.gz
+docker run -d --name inventory-agent -p 8000:8000 --env-file .env inventory-agent:github
+```
+
+Open http://localhost:8000.
