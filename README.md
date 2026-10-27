@@ -14,8 +14,9 @@ Open http://localhost:8000. The image starts with an empty inventory database. A
 ## Run from GitHub
 
 ```powershell
-git clone https://github.com/theanamansour/eece430-assignment5-inventory-agent.git
-cd eece430-assignment5-inventory-agent
+git clone https://github.com/theanamansour/EECE430-LAB5-TheanaMansour.git
+cd EECE430-LAB5-TheanaMansour
 ```
 
 Create `.env` with your Gemini API key, then run the build and run commands above.
+
