@@ -2,31 +2,20 @@
 
 ## Build and run
 
-Open a terminal in `inventory`:
+Open a terminal in the main project folder. Create a local `.env` file using `.env.example` and set your `GEMINI_API_KEY`.
 
 ```powershell
 docker build --load -t inventory-agent .
 docker run -d --name inventory-agent -p 8000:8000 --env-file .env inventory-agent
 ```
 
-Open http://localhost:8000. Create a local `.env` file with `GEMINI_API_KEY=your_gemini_api_key` using `.env.example` as a template. The image starts with an empty inventory database. Add items through the agent.
+Open http://localhost:8000. The image starts with an empty inventory database. Add items through the agent.
 
 ## Run from GitHub
 
 ```powershell
 git clone https://github.com/theanamansour/eece430-assignment5-inventory-agent.git
-cd eece430-assignment5-inventory-agent/inventory
+cd eece430-assignment5-inventory-agent
 ```
 
 Create `.env` with your Gemini API key, then run the build and run commands above.
-
-## Run the published Docker image
-
-Download `inventory-agent.tar.gz` from [GitHub Releases](https://github.com/theanamansour/eece430-assignment5-inventory-agent/releases/tag/v1.0). In `inventory`, with your local `.env` file:
-
-```powershell
-docker load -i inventory-agent.tar.gz
-docker run -d --name inventory-agent -p 8000:8000 --env-file .env inventory-agent:github
-```
-
-Open http://localhost:8000.
